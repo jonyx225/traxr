@@ -190,9 +190,50 @@ vLLM, Together, Groq, OpenRouter, anything OpenAI-compatible.
 runs a real GAIA benchmark question end-to-end through Traxr's built-in
 multi-agent system — no setup required (falls back to a deterministic stub
 without an API key, upgrades automatically to a real `gpt-4o-mini` agent if
-`OPENAI_API_KEY` is set). See
+`OPENAI_API_KEY` is set).
+
+### Sample output
+
+Run it with no API key and `print(results.summary())` gives the compact
+diagnosis — how the perturbations manifested, how far the traces diverged,
+whether the answer survived, and what it cost:
+
+```text
+Traxr experiment summary
+  agent kind: builtin (capture: builtin)
+  pairs: 7 (7 scored, 0 skipped)
+  manifestations:
+     71%  loop_or_extended_execution
+     29%  no_observable_effect
+  d_norm: mean 0.3702, max 0.7857 over 7 pair(s)
+  noise floor (d_norm): unmeasured (deterministic built-in path)
+  recovery rate: 40% of diverged pairs kept their answer
+  token overhead: mean 2.53x
+```
+
+With `OPENAI_API_KEY` set (`gpt-4o-mini`, `scorer=llm_judge_match`), the
+per-pair report (`results.to_report()`) is where the trace-level signal
+shows up — one real run produced:
+
+| perturbation | manifestation | answer changed | task succeeded | `d_norm` | `t*` | token overhead |
+|---|---|---|---|---|---|---|
+| `column_swap` | no_observable_effect | no | yes | 0.00 | — | 0.99x |
+| `label_corrupt` | loop_or_extended_execution | yes | no | 0.69 | 0 | 3.02x |
+| `data_type_corrupt` | loop_or_extended_execution | no | yes | 0.56 | 0 | 4.46x |
+| `row_duplicate` | loop_or_extended_execution | yes | no | 0.25 | 2 | 1.56x |
+| `irrelevant_columns` | loop_or_extended_execution | no | yes | 0.25 | 2 | 1.45x |
+| `unit_change` | silent_semantic_corruption | yes | no | 0.00 | — | 1.00x |
+| `null_content` | catastrophic_failure | yes | — | 0.65 | 2 | — |
+
+Two rows (`data_type_corrupt`, `irrelevant_columns`) still landed the right
+answer — but only after the trace visibly lengthened (token overhead up to
+4.46x), which an answer-only harness would score as clean passes.
+`unit_change` is the inverse: the answer flipped while the trace looked
+structurally identical (`d_norm=0.0`). See
 [examples/README.md](https://github.com/anna-mazhar/traxr/blob/main/examples/README.md)
-for a worked-through results writeup.
+for the full writeup. Your own numbers will differ (LLM nondeterminism,
+model version) — rerun and compare against this table rather than treating
+it as fixed.
 
 ## LangGraph
 
