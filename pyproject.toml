@@ -101,8 +101,10 @@ select = [
 "src/traxr/mas/**" = ["UP", "B", "E501", "E741", "I", "F401", "F541", "F821", "F841"]
 
 [tool.ruff.format]
-# mas/ keeps its original formatting; excluded from the formatter.
-exclude = ["src/traxr/mas/**"]
+# mas/ keeps its original formatting; excluded from the formatter. *.md keeps
+# the docs' hand-aligned code samples (newer ruff reformats fenced Python in
+# Markdown, which reflows the teaching snippets in README/quickstart).
+exclude = ["src/traxr/mas/**", "*.md"]
 
 [tool.mypy]
 python_version = "3.10"
