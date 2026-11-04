@@ -67,9 +67,9 @@ dev = [
 traxr = "traxr.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/anna-mazhar/traxr"
-Repository = "https://github.com/anna-mazhar/traxr"
-Changelog = "https://github.com/anna-mazhar/traxr/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/jonyx225/traxr"
+Repository = "https://github.com/jonyx225/traxr"
+Changelog = "https://github.com/jonyx225/traxr/blob/main/CHANGELOG.md"
 
 [tool.setuptools.packages.find]
 where = ["src"]

@@ -2,7 +2,7 @@
 
 traxr runs **your agent** against **deliberately corrupted copies of your
 data**. Read this before running an agent that has real tools. (This page
-mirrors [`SECURITY.md`](https://github.com/anna-mazhar/traxr/blob/main/SECURITY.md)
+mirrors [`SECURITY.md`](https://github.com/jonyx225/traxr/blob/main/SECURITY.md)
 in the repository.)
 
 ## Perturbed data is an injection-adjacent vector

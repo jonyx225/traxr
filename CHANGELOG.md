@@ -83,4 +83,4 @@ Contamination in Multi-Agent Systems”* (Mazhar, Suri, Galhotra) as an SDK.
 - Landing page + MkDocs documentation site with Pages deployment, and
   this tag-triggered release workflow.
 
-[1.0.0]: https://github.com/anna-mazhar/traxr/releases/tag/v1.0.0
+[1.0.0]: https://github.com/jonyx225/traxr/releases/tag/v1.0.0

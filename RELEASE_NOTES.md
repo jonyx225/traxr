@@ -6,7 +6,7 @@ execution trace diverged (`d_norm`), where it started (`t*`), how the
 damage manifested, and what it cost in tokens.
 
 ```bash
-pip install "traxr[document,openai,pandas] @ git+https://github.com/anna-mazhar/traxr.git@v1.0.0"
+pip install "traxr[document,openai,pandas] @ git+https://github.com/jonyx225/traxr.git@v1.0.0"
 ```
 
 ## Highlights
@@ -26,11 +26,11 @@ pip install "traxr[document,openai,pandas] @ git+https://github.com/anna-mazhar/
   calls; `max_llm_calls_per_run` is enforced inside the capture wrapper;
   live token totals per run.
 
-Read [SECURITY.md](https://github.com/anna-mazhar/traxr/blob/main/SECURITY.md)
+Read [SECURITY.md](https://github.com/jonyx225/traxr/blob/main/SECURITY.md)
 before running an agent with side-effectful tools: perturbed data is an
 injection-adjacent vector, and traxr cannot sandbox your agent.
 
 Full details in the
-[CHANGELOG](https://github.com/anna-mazhar/traxr/blob/main/CHANGELOG.md).
+[CHANGELOG](https://github.com/jonyx225/traxr/blob/main/CHANGELOG.md).
 Operationalizes *“Trace-Level Analysis of Information Contamination in
 Multi-Agent Systems”* (Mazhar, Suri, Galhotra).

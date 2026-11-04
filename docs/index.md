@@ -33,7 +33,7 @@ Check [which agents are traceable](traceable.md), and read the
 ## Install
 
 ```bash
-pip install "traxr[document,openai,pandas] @ git+https://github.com/anna-mazhar/traxr.git@main"
+pip install "traxr[document,openai,pandas] @ git+https://github.com/jonyx225/traxr.git@main"
 ```
 
 | extra | provides |

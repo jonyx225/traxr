@@ -1,8 +1,8 @@
 site_name: traxr
 site_description: Controlled-perturbation experiments for your own agent and your own data.
-site_url: https://anna-mazhar.github.io/traxr/docs/
-repo_url: https://github.com/anna-mazhar/traxr
-repo_name: anna-mazhar/traxr
+site_url: https://jonyx225.github.io/traxr/docs/
+repo_url: https://github.com/jonyx225/traxr
+repo_name: jonyx225/traxr
 docs_dir: docs
 
 theme:

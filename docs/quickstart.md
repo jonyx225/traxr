@@ -186,7 +186,7 @@ vLLM, Together, Groq, OpenRouter, anything OpenAI-compatible.
 
 ## Try it on a real benchmark task
 
-[`examples/gaia_menu_sales.py`](https://github.com/anna-mazhar/traxr/blob/main/examples/gaia_menu_sales.py)
+[`examples/gaia_menu_sales.py`](https://github.com/jonyx225/traxr/blob/main/examples/gaia_menu_sales.py)
 runs a real GAIA benchmark question end-to-end through Traxr's built-in
 multi-agent system — no setup required (falls back to a deterministic stub
 without an API key, upgrades automatically to a real `gpt-4o-mini` agent if
@@ -230,7 +230,7 @@ answer — but only after the trace visibly lengthened (token overhead up to
 4.46x), which an answer-only harness would score as clean passes.
 `unit_change` is the inverse: the answer flipped while the trace looked
 structurally identical (`d_norm=0.0`). See
-[examples/README.md](https://github.com/anna-mazhar/traxr/blob/main/examples/README.md)
+[examples/README.md](https://github.com/jonyx225/traxr/blob/main/examples/README.md)
 for the full writeup. Your own numbers will differ (LLM nondeterminism,
 model version) — rerun and compare against this table rather than treating
 it as fixed.
@@ -249,5 +249,5 @@ with an instrumented client is suppressed. For non-messages-state graphs, pass
 
 ## The notebook
 
-[`notebooks/traxr_quickstart.ipynb`](https://github.com/anna-mazhar/traxr/blob/main/notebooks/traxr_quickstart.ipynb)
+[`notebooks/traxr_quickstart.ipynb`](https://github.com/jonyx225/traxr/blob/main/notebooks/traxr_quickstart.ipynb)
 runs top-to-bottom without an API key. Open it in Colab.

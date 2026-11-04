@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/anna-mazhar/traxr/actions/workflows/ci.yml"><img src="https://github.com/anna-mazhar/traxr/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://github.com/jonyx225/traxr/actions/workflows/ci.yml"><img src="https://github.com/jonyx225/traxr/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <img src="https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue" alt="Python versions">
   <img src="https://img.shields.io/badge/license-MIT-green" alt="MIT license">
   <a href="https://dl.acm.org/doi/10.1145/3786335.3813147"><img src="https://img.shields.io/badge/paper-CAIS%202026-8b5cf6" alt="Paper"></a>
@@ -28,7 +28,7 @@ OpenAI-compatible endpoint through the OpenAI SDK.
 ## Install
 
 ```bash
-pip install "traxr[document,openai,pandas] @ git+https://github.com/anna-mazhar/traxr.git@main"
+pip install "traxr[document,openai,pandas] @ git+https://github.com/jonyx225/traxr.git@main"
 ```
 
 <details>
